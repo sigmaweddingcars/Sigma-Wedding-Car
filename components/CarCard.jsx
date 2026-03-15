@@ -38,15 +38,18 @@ export default function CarCard({ car }) {
                             Decoration Charges May Apply
                         </span>
                     )}
-                    {car.name === "Mahindra Thar" && (
+                    {car.name === "Mahindra Thar" ? (
                         <>
                             <span className="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-700 ring-1 ring-inset ring-yellow-600/20">
                                 Fully Modified
                             </span>
-                            <span className="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-700 ring-1 ring-inset ring-yellow-600/20">
-                                Babas Horn
-                            </span>
                         </>
+                    ) : (
+                        car.features && car.features.map((feature, idx) => (
+                            <span key={idx} className="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-700 ring-1 ring-inset ring-yellow-600/20">
+                                {feature}
+                            </span>
+                        ))
                     )}
                 </div>
                 <div className="mt-6 flex justify-center">
