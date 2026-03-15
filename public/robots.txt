@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://sigma-wedding-car-trivandrum.vercel.app/sitemap.xml
